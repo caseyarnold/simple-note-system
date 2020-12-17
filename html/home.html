@@ -1,0 +1,5 @@
+<?php if(User::is_logged_in()): ?>
+Hello <?php echo User::user(); ?>!
+<?php else: ?>
+Authorized users only! Please use the button above to login and authenticate yourself. 
+<?php endif; ?>

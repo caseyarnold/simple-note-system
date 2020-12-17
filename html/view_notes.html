@@ -1,0 +1,7 @@
+<h1>Notes</h1>
+<strong>Total notes: <?php echo $_SESSION['notes']->num_rows; ?></strong> <br />
+<?php while($note = $_SESSION['notes']->fetch_assoc()): ?>
+	<h3><?=$note['title']?></h3>
+	<p><?=$note['content']?></p>
+	<p>Posted by <?php echo User::get_user_data($note['user_id'], 'username')?></p>
+<?php endwhile; ?>
